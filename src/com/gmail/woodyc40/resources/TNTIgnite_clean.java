@@ -14,7 +14,7 @@ public class TNTIgnite extends JavaPlugin{
                         public void onPlace(BlockPlaceEvent e){
                                 if(e.getBlock().getType().equals(Material.TNT){
                                         if(e.getPlayer().hasPermission("tnt.ignite")){
-                                                e.setCancelled(true);
+                                                e.getBlock().setType(Material.AIR);
                                                 e.getBlock().getWorld().spawn(e.getBlock().getLocation().add(0.5, 0.25, 0.5), TNTPrimed.class);
                                         }else{
                                                 return;
