@@ -16,8 +16,6 @@ public class TNTIgnite extends JavaPlugin{
                                         if(e.getPlayer().hasPermission("tnt.ignite")){
                                                 e.getBlock().setType(Material.AIR);
                                                 e.getBlock().getWorld().spawn(e.getBlock().getLocation().add(0.5, 0.25, 0.5), TNTPrimed.class);
-                                        }else{
-                                                return;
                                         }
                                 }
                         }
